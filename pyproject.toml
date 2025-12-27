@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deep-agent-research-assistant"
+version = "0.1.0"
+description = "An intermediate Deep Agents project demonstrating planning, task decomposition, context management, subagent spawning, and long-term memory."
+authors = [{name = "Your Name"}]
+dependencies = [
+    "deepagents",
+    "tavily-python",
+    "langgraph",
+    "langchain",
+    "langchain-openai",
+    "python-dotenv",
+    "langsmith",
+    "requests"
+]
+requires-python = ">=3.9"
+
+[tool.setuptools]
+packages = ["src"]
+
+[project.scripts]
+deep-agent = "src.main:main"
