@@ -1,5 +1,8 @@
 # Deep Agent Research Assistant
 
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/Gihan007/deep_agent-Architecture)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 An intermediate-level project demonstrating all core concepts of LangChain's Deep Agents framework. This application showcases planning, task decomposition, context management, subagent spawning, and long-term memory in a comprehensive research assistant.
 
 ## 🚀 Features
@@ -32,22 +35,137 @@ An intermediate-level project demonstrating all core concepts of LangChain's Dee
    - Automatic graph visualization saved as PNG files in the workspace directory
    - Uses Mermaid diagrams for clear representation of agent flows
 
-## � Quick Start
+## 📁 Project Structure
 
-1. **Set up API keys**:
-   ```bash
-   # Copy the example environment file
-   cp .env.example .env
+```
+deep_agent-Architecture/
+├── src/
+│   ├── __init__.py
+│   └── main.py                 # Main application
+├── docs/
+│   └── article.md              # Technical article about Deep Agents
+├── examples/
+│   ├── todo_AI_Ethics_Research.md
+│   └── analysis_report.md      # Sample research outputs
+├── workspace/                  # Generated files (gitignored)
+├── .env.example                # Environment template
+├── requirements.txt            # Python dependencies
+├── pyproject.toml             # Project configuration
+└── README.md                  # This file
+```
 
-   # Edit .env with your API keys (get them from the links below)
-   # OPENAI_API_KEY: https://platform.openai.com/api-keys
-   # TAVILY_API_KEY: https://tavily.com/
-   ```
+## 🛠️ Quick Start
 
-2. **Install dependencies**:
-   ```bash
-   pip install -e .
-   ```
+### 1. **Clone the repository**
+```bash
+git clone https://github.com/Gihan007/deep_agent-Architecture.git
+cd deep_agent-Architecture
+```
+
+### 2. **Set up API keys**:
+```bash
+# Copy the example environment file
+cp .env.example .env
+
+# Edit .env with your API keys (get them from the links below)
+# OPENAI_API_KEY: https://platform.openai.com/api-keys
+# TAVILY_API_KEY: https://tavily.com/
+```
+
+### 3. **Install dependencies**:
+```bash
+pip install -e .
+```
+
+### 4. **Run the research assistant**:
+```bash
+# Basic research
+python src/main.py "AI Ethics"
+
+# Advanced research with parallel processing
+python src/main.py "Machine Learning" --graph parallel --depth advanced
+
+# List generated workspace files
+python src/main.py "Any Topic" --list-files
+```
+
+## 🎯 Usage Examples
+
+### Command Line Interface
+```bash
+# Different research depths
+python src/main.py "Quantum Computing" --depth basic
+python src/main.py "Climate Change" --depth intermediate
+python src/main.py "AI Safety" --depth advanced
+
+# Different agent architectures
+python src/main.py "Blockchain" --graph default      # Simple agent
+python src/main.py "IoT Security" --graph hierarchical  # Sequential phases
+python src/main.py "5G Networks" --graph parallel    # Concurrent subagents
+python src/main.py "Edge Computing" --graph workflow # Conditional routing
+```
+
+### Programmatic Usage
+```python
+from src.main import DeepAgentResearchAssistant
+
+# Initialize the assistant
+assistant = DeepAgentResearchAssistant(graph_architecture="parallel")
+
+# Run research
+result = await assistant.research_topic("Your Research Topic", "intermediate")
+print(result["response"])
+```
+
+## 📚 Documentation
+
+- **[Technical Article](docs/article.md)**: Comprehensive guide to Deep Agents framework
+- **[API Reference](src/main.py)**: Complete code documentation
+- **[Examples](examples/)**: Sample research outputs and task plans
+
+## 🔧 Architecture Details
+
+### Agent Types
+- **Default Agent**: Simple `create_deep_agent()` implementation
+- **Hierarchical Agent**: Sequential planner → researcher → synthesizer phases
+- **Parallel Agent**: Concurrent subagent spawning with coordination
+- **Workflow Agent**: Conditional routing based on task complexity
+
+### Tool Ecosystem
+- **Internet Search**: Tavily API with DuckDuckGo fallback
+- **Task Planning**: Automated research decomposition
+- **Memory Management**: Persistent context storage
+- **File Operations**: Autonomous document management
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **LangChain** for the Deep Agents framework
+- **OpenAI** for GPT-4 API
+- **Tavily** for intelligent web search
+- **Anthropic** for Claude API (optional subagent enhancement)
+
+## 📞 Support
+
+- **Issues**: [GitHub Issues](https://github.com/Gihan007/deep_agent-Architecture/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/Gihan007/deep_agent-Architecture/discussions)
+
+---
+
+**Star this repository** ⭐ if you find it helpful for learning Deep Agents!
+
+#DeepAgents #LangChain #AI #MultiAgentSystems #MachineLearning #Python
 
 3. **Run tests**:
    ```bash
