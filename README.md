@@ -402,8 +402,4 @@ async def research_endpoint(topic: str, depth: str = "intermediate"):
 
 ## 📄 License
 
-MIT License - see LICENSE file for details.
-
-## ⚠️ Disclaimer
-
-This project is for educational purposes demonstrating Deep Agents concepts. Ensure compliance with API terms of service and respect rate limits.
+MIT License - see LICENSE file for details
